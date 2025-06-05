@@ -1,0 +1,98 @@
+/* Page background and base font */
+body {
+    background: linear-gradient(135deg, #e0eaff, #f7f7f7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Card container (inside col-md-6) */
+.card {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    animation: slideFadeIn 1s ease forwards;
+    transform: translateY(20px);
+    opacity: 0;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Slide-in animation */
+@keyframes slideFadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Heading style */
+.card h2 {
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Input field styling */
+.form-control {
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Alert box fade-in */
+.alert {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive handling */
+@media (max-width: 767px) {
+    .card {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
